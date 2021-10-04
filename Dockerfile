@@ -7,7 +7,7 @@
 FROM alpine:3.14
 
 # Adapted from https://github.com/coopernurse/nginx-s3-proxy/blob/master/Dockerfile
-RUN apk add --no-cache -t .build ruby-dev build-base g++ openssl-dev pcre-dev zlib-dev \
+RUN apk add --no-cache -t .build ruby-dev build-base g++ openssl-dev pcre-dev zlib-dev curl \
     && apk add --no-cache -t .nginx openssl pcre zlib \
     && curl -L -o - http://nginx.org/download/nginx-1.19.4.tar.gz | tar xzf - \
     && cd nginx-* \
