@@ -18,7 +18,7 @@ RUN cd nginx-* \
     && ./configure --with-http_ssl_module --add-module=ngx_aws_auth \
     && make -j2 install \
     && install -m 0755 ngx_aws_auth/generate_signing_key /usr/local/bin
-RUN cd ..
+RUN cd .. \
     && rm -rf nginx-* \
     && apk del --no-cache .build
 
