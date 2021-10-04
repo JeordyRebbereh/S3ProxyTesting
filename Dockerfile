@@ -11,6 +11,7 @@ RUN apk add --no-cache -t .build ruby-dev build-base g++ openssl-dev pcre-dev zl
 RUN apk add --no-cache -t curl git bash python3
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN apk add --no-cache -t .nginx openssl pcre zlib
+RUN apk upgrade
 RUN curl -L -o - http://nginx.org/download/nginx-1.19.4.tar.gz | tar xzf -
 RUN cd nginx-* \
     && git clone https://github.com/anomalizer/ngx_aws_auth.git \
