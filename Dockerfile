@@ -22,4 +22,4 @@ RUN apk add --no-cache -t .build ruby-dev build-base g++ openssl-dev pcre-dev zl
 
 COPY start-s3-proxy.sh /usr/local/bin/
 
-CMD ["/bin/sh", "/usr/local/bin/start-s3-proxy.sh", "jeordy-test-bucket", "us-east-2"]
+CMD ["/bin/bash", "/usr/local/bin/start-s3-proxy.sh", "jeordy-test-bucket", "us-east-2"]
